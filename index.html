@@ -8,14 +8,25 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet"> 
-    <title>Webte Mapy</title>
+    <title>Mapa FEI STU</title>
   </head>
   <body>
     <header>
-        <h1>Generátor tabuľky hodnôt</h1>
+        <h1>Mapa - Akým spôsobom sa chcete dopraviť na FEI STU ?</h1>
     </header>
-
+    <div class="inputs">
+      <select name="options" id="options">
+        <option>Auto</option>
+        <option>Chôdza</option>
+      </select>
+      <input class="form-control" id="text-input" type="text" placeholder="Odkiaľ cestujete?">   
+      <button id="submit-btn">Zobraziť trasu</button>  
+    </div>    
+    <div id="map"></div>
+    <div id="pano"></div>
     <footer>© 2021 Martin Lauš</footer>
     <script src="script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtQcm7ytNwQNyksnJIIwzRzDgEm6latB8&libraries=places&callback=initMap"></script>
+    
   </body>
 </html>
